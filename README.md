@@ -1,12 +1,26 @@
 # websocket-testing-client
 
+## Current features
 
-Goal is to create a simple to use websocket client, with on-demand support for:
+### Clients
+ - Plain Websocket
+ - Stomp
+ - **!!No SockJS support for now!!**
+### TestCase builder
+   - Connect to an arbitrary Stomp-WS endpoint
+   - Subscribe to a topic
+   - Waiting (time-based)
+   - Validate received messages
+
+The test ```org.websockettestingclient.testframework.BasicTestCasesUnitTest``` contains an example on how to use these.
+
+## Goal
+Goal is to create a simple to use websocket client for testing websocket interactions, with on-demand support for:
  - Plain websockets
  - STOMP
  - SockJS
 
-I intend for this to also include a framework, as a prototype, to be able to run automatic, end-to-end tests against Spring websockets, so we can:
+The basic testing goals are:
  - Validate object format contracts
  - Validate communications work
  - Validate fallback mechanisms (e.g. SockJS)
